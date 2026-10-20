@@ -1,3 +1,5 @@
+![CSE HitDad — Sports Club Management Platform](docs/assets/hitdad-banner-16x9.png)
+
 # CSE HitDad
 
 Dự án môn **Phát triển ứng dụng di động** của nhóm **Hiền và nhiều tài**.
