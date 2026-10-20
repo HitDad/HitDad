@@ -21,8 +21,6 @@ sẽ được xác định dựa trên bằng chứng và quyết định sản 
 
 ## Assignment 1 — Product Discovery & Foundation
 
-**Hạn nộp đã gia hạn:** 20/10/2026.
-
 Tài liệu đang được nhóm xây dựng trên Wiki, gồm:
 
 1. Project Direction.
