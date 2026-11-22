@@ -185,47 +185,47 @@ export const Typography = {
   hero64: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 64,
-    lineHeight: 58,
+    lineHeight: 70,
   },
   money60: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 60,
-    lineHeight: 60,
+    lineHeight: 66,
   },
   display40: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 40,
-    lineHeight: 40,
+    lineHeight: 48,
   },
   date36: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 36,
-    lineHeight: 34,
+    lineHeight: 40,
   },
   date26: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 26,
-    lineHeight: 26,
+    lineHeight: 30,
   },
   cardTitle24: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 24,
-    lineHeight: 25,
+    lineHeight: 31,
   },
   teamTitle22: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 22,
-    lineHeight: 22,
+    lineHeight: 28,
   },
   time20: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 20,
-    lineHeight: 20,
+    lineHeight: 26,
   },
   tier15: {
     fontFamily: FontFamilies.barlowCondensedBold,
     fontSize: 15,
-    lineHeight: 15,
+    lineHeight: 20,
   },
   section15: {
     fontFamily: FontFamilies.beVietnamSemiBold,
@@ -280,17 +280,17 @@ export const Typography = {
   caption11: {
     fontFamily: FontFamilies.beVietnamSemiBold,
     fontSize: 11,
-    lineHeight: 15,
+    lineHeight: 16,
   },
   nav11: {
     fontFamily: FontFamilies.beVietnamMedium,
     fontSize: 11,
-    lineHeight: 15,
+    lineHeight: 16,
   },
   headerSub11: {
     fontFamily: FontFamilies.beVietnamRegular,
     fontSize: 11,
-    lineHeight: 15,
+    lineHeight: 16,
   },
 } as const satisfies Record<string, TextStyle>;
 

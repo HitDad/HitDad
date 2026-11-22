@@ -65,13 +65,14 @@ export function AuthButton({
 
 const styles = StyleSheet.create({
   button: {
-    height: 50,
+    minHeight: 50,
     borderRadius: Radius.card,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     gap: Spacing.sm,
     paddingHorizontal: Spacing.lg,
+    paddingVertical: 12,
   },
   disabled: {
     opacity: 0.55,

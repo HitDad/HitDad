@@ -23,13 +23,29 @@ export interface TimeSlot {
   startTime: string;
   endTime: string;
   createdAt: string;
+  voteCount?: number;
+  votesCount?: number;
+  votes?: TimeSlotVoteRef[];
+  timeSlotVotes?: TimeSlotVoteRef[];
   _count?: {
-    votes: number;
+    votes?: number;
+    timeSlotVotes?: number;
   };
 }
 
 export interface TimeSlotVoteRef {
-  timeSlotId: string;
+  id?: string;
+  timeSlotId?: string;
+  voteId?: string;
+  userId?: string;
+  timeSlot?: {
+    id: string;
+  };
+  vote?: {
+    id?: string;
+    userId?: string;
+    status?: VoteStatus;
+  };
 }
 
 export interface VoteItem {
