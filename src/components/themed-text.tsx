@@ -1,17 +1,27 @@
 import { Platform, StyleSheet, Text, type TextProps } from 'react-native';
 
-import { Fonts, ThemeColor } from '@/constants/theme';
+import { Fonts, ThemeColor, Typography, type TypographyVariant } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 
 export type ThemedTextProps = TextProps & {
   type?: 'default' | 'title' | 'small' | 'smallBold' | 'subtitle' | 'link' | 'linkPrimary' | 'code';
+  variant?: TypographyVariant;
   themeColor?: ThemeColor;
 };
 
-export function ThemedText({ style, type = 'default', themeColor, ...rest }: ThemedTextProps) {
+export function ThemedText({
+  style,
+  type = 'default',
+  variant,
+  themeColor,
+  ...rest
+}: ThemedTextProps) {
   const theme = useTheme();
+  const typographyStyle = variant ? Typography[variant] : styles[type];
 
-  return <Text style={[{ color: theme[themeColor ?? 'text'] }, styles[type], style]} {...rest} />;
+  return (
+    <Text style={[{ color: theme[themeColor ?? 'text'] }, typographyStyle, style]} {...rest} />
+  );
 }
 
 const styles = StyleSheet.create({
