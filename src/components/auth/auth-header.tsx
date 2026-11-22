@@ -64,7 +64,9 @@ export function AuthHeader({
             <View style={[styles.backCircle, { backgroundColor: colors.onPrimaryOverlay }]}>
               <Ionicons name="arrow-back" size={18} color={colors.onPrimary} />
             </View>
-            <Text style={[Typography.title14, { color: colors.onPrimary }]}>{backLabel}</Text>
+            <Text numberOfLines={1} style={[Typography.title14, styles.backLabel, { color: colors.onPrimary }]}>
+              {backLabel}
+            </Text>
           </Pressable>
         )}
 
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   brandRow: {
-    height: 46,
+    minHeight: 46,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
@@ -112,13 +114,18 @@ const styles = StyleSheet.create({
   },
   brandTextGroup: {
     flex: 1,
+    minWidth: 0,
   },
   backRow: {
-    height: 46,
+    minHeight: 46,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
     alignSelf: 'flex-start',
+    maxWidth: '100%',
+  },
+  backLabel: {
+    flexShrink: 1,
   },
   backCircle: {
     width: 34,
@@ -126,6 +133,7 @@ const styles = StyleSheet.create({
     borderRadius: 17,
     justifyContent: 'center',
     alignItems: 'center',
+    flexShrink: 0,
   },
   pressed: {
     opacity: 0.78,

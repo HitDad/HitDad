@@ -50,6 +50,10 @@ function RootNavigator() {
         </Stack.Protected>
         <Stack.Protected guard={isAuthenticated} redirectTo="/(auth)/login">
           <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="notifications" />
+          <Stack.Screen name="matches/create" />
+          <Stack.Screen name="matches/payment" />
+          <Stack.Screen name="matches/[id]" />
         </Stack.Protected>
       </Stack>
     </ThemeProvider>
