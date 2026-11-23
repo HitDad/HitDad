@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSE HitDad — Nền tảng điều phối kèo đá bóng câu lạc bộ</title>
+  <meta
+    name="description"
+    content="CSE HitDad giúp chủ kèo và thành viên CLB bóng đá nội bộ bình chọn khung giờ, điểm danh tại sân, chia đội cân bằng và chốt tiền VietQR chỉ trên một ứng dụng di động."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Current Development Status Banner (Required by Section 3.7) -->
+  <div class="status-announcement" role="status">
+    <div class="container">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-tag">Assignment 2 · Design &amp; Validation</span>
+      <span>
+        Trạng thái hiện tại: <strong>Đã hoàn tất UI/UX Design System &amp; Interactive Figma Prototype</strong> — Chuẩn bị triển khai app mobile Expo / React Native ở Giai đoạn 3.
+      </span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="CSE HitDad Trang chủ">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2.5L4.5 5.6V11.4C4.5 16.35 7.7 20.85 12 22C16.3 20.85 19.5 16.35 19.5 11.4V5.6L12 2.5Z"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <circle cx="12" cy="11.5" r="2.6" fill="#FFFFFF" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">CSE HitDad</span>
+          <span class="brand-sub">CSE FC HCMUT · Mobile App</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Điều hướng chính">
+        <a href="#problem">Vấn đề &amp; Đối tượng</a>
+        <a href="#uvp">Giải pháp &amp; MVP</a>
+        <a href="#screens">Giao diện Figma</a>
+        <a href="#design-system">Design System</a>
+        <a href="#status">Tiến độ dự án</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a
+          class="btn btn-outline btn-sm"
+          data-behance-link
+          href="https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Behance Case Study
+        </a>
+        <a
+          class="btn btn-primary btn-sm"
+          href="https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Thử Prototype
+        </a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-label="Mở menu điều hướng"
+        aria-expanded="false"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <svg class="pitch-motif" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <line x1="600" y1="0" x2="600" y2="600" stroke="#FFFFFF" stroke-width="2" />
+        <circle cx="600" cy="300" r="120" stroke="#FFFFFF" stroke-width="2" fill="none" />
+        <circle cx="600" cy="300" r="6" fill="#FFFFFF" />
+        <rect x="0" y="130" width="140" height="340" stroke="#FFFFFF" stroke-width="2" fill="none" />
+        <rect x="1060" y="130" width="140" height="340" stroke="#FFFFFF" stroke-width="2" fill="none" />
+      </svg>
+
+      <div class="container hero-grid">
+        <div data-reveal="fade-left">
+          <div class="hero-badge">
+            <span>⚽</span>
+            <span>CO3043 Mobile App Development · Nhóm Hiền và nhiều tài</span>
+          </div>
+          <h1 class="hero-title">CSE HITDAD</h1>
+          <p class="hero-slogan">Chốt kèo nhanh · Chia đội chuẩn · Sòng phẳng tiền sân</p>
+          <p class="hero-desc">
+            Ứng dụng di động thay thế quy trình rời rạc trên Messenger, Excel và nhắc tiền thủ công cho câu lạc bộ bóng đá nội bộ — gói gọn trọn vẹn vòng đời trận đấu từ bình chọn giờ đá, check-in tại sân, cân đội theo tier đến chia tiền VietQR minh bạch.
+          </p>
+
+          <div class="hero-ctas">
+            <a
+              class="btn btn-white"
+              href="https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ▶ Trải nghiệm Figma Prototype
+            </a>
+                <a
+              class="btn btn-outline-light"
+              data-behance-link
+              href="https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xem Behance Case Study
+            </a>
+            <a
+              class="btn btn-outline-light"
+              href="https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              File Figma Design
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <strong>30+</strong>
+              <span>Màn hình thiết kế đầy đủ trạng thái (Happy &amp; Error)</span>
+            </div>
+            <div class="metric-item">
+              <strong>5 Flows</strong>
+              <span>Prototype tương tác phủ kín MVP &amp; xử lý lỗi tại sân</span>
+            </div>
+            <div class="metric-item">
+              <strong>4 Bước</strong>
+              <span>Vote giờ → Check-in → Chia đội → VietQR</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-phones" data-reveal="zoom-in" style="--reveal-delay: 120ms;" aria-label="Xem trước màn hình ứng dụng HitDad">
+          <div class="phone-frame phone-side">
+            <img src="assets/01-lich-da.png" alt="Màn hình Lịch đá và bình chọn khung giờ HitDad" />
+          </div>
+          <div class="phone-frame phone-center">
+            <img src="assets/02f2-mo-checkin.png" alt="Màn hình Chia đội và Check-in tại sân HitDad" />
+          </div>
+          <div class="phone-frame phone-side">
+            <img src="assets/03-thanh-toan-vietqr.png" alt="Màn hình Chốt bill và mã chuyển khoản VietQR HitDad" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Statement & Target Users -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Problem Statement &amp; Target Users</span>
+          <h2 class="section-title">Vì sao các kèo đá phủi nội bộ luôn vất vả trước, tại sân và sau trận?</h2>
+          <p class="section-subtitle">
+            Qua quan sát thực tế và vận hành thử nghiệm tại CLB bóng đá nội bộ CSE FC HCMUT (~30–38 thành viên), việc tổ chức trận đấu bằng tin nhắn nhóm gây thất thoát thời gian và dễ phát sinh sai sót ở cả ba giai đoạn.
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <span class="stage-pill">1 · Trước trận đấu</span>
+            <h3>Poll trôi tin nhắn &amp; Chốt quân số chậm</h3>
+            <p>
+              Thành viên bình chọn giờ đá trên Messenger bị trôi tin nhắn; chủ kèo phải tự đếm thủ công từng người tham gia, người báo bận hoặc người dắt khách để giữ sân đúng giờ.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="stage-pill">2 · Tại sân bóng</span>
+            <h3>Chia đội cảm tính &amp; Nghỉ sát giờ</h3>
+            <p>
+              Mất 15–20 phút đầu giờ chỉ để điểm danh và chia đội cho đều trình độ và thủ môn. Khi có người xin nghỉ đột xuất sau khi đã xếp đội, chủ kèo phải tính lại toàn bộ danh sách ngay trên sân.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="stage-pill">3 · Sau trận đấu</span>
+            <h3>Tính tiền nhầm &amp; Ngại nhắc nợ từng người</h3>
+            <p>
+              Tiền sân, nước và thuê áo bib phải chia lại theo đúng số người thực tế ra sân. Chủ kèo khó theo dõi ai đã chuyển khoản hay còn thiếu, phải nhắn tin nhắc riêng nhiều lần.
+            </p>
+          </article>
+        </div>
+
+        <div class="cards-2 persona-grid">
+          <article class="card card-soft persona-card">
+            <div class="persona-avatar">CK</div>
+            <div>
+              <h3>Đối tượng 1: Chủ kèo / Ban cán sự CLB</h3>
+              <p>Người trực tiếp đặt sân, chốt giờ đá, cân đối đội hình và đứng ra thu chi cho cả buổi.</p>
+              <ul class="persona-list">
+                <li>Cần tạo kèo trong vài chạm và tự động tổng hợp người đủ điều kiện đá.</li>
+                <li>Cần chia đội theo Tier (S/A/B/Mới) và Thủ môn ở chế độ nháp trước khi công bố.</li>
+                <li>Cần duyệt yêu cầu xin nghỉ đột xuất và đối soát trạng thái chuyển khoản minh bạch.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card card-soft persona-card">
+            <div class="persona-avatar">TV</div>
+            <div>
+              <h3>Đối tượng 2: Thành viên CLB (Sinh viên &amp; Cựu SV)</h3>
+              <p>Người tham gia đá bóng giao lưu định kỳ hàng tuần, thường xuyên dùng điện thoại khi di chuyển.</p>
+              <ul class="persona-list">
+                <li>Cần xem lịch đá sắp tới, chỉ đường Google Maps tới sân và vote giờ trong dưới 10 giây.</li>
+                <li>Cần check-in nhanh tại sân (kể cả hoàn tác nếu bấm nhầm hoặc thử lại khi sóng 4G yếu).</li>
+                <li>Cần quét VietQR hoặc copy nội dung chuyển khoản chuẩn để tự động gạch nợ.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- UVP & MVP Core Features -->
+    <section class="section section-alt" id="uvp">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Unique Value Proposition &amp; MVP Scope</span>
+          <h2 class="section-title">Một vòng khép kín cho toàn bộ trận đấu trên điện thoại</h2>
+          <p class="section-subtitle">
+            HitDad không biến thành app chat thay thế Messenger; ứng dụng tập trung giải quyết dứt điểm khâu điều phối nghiệp vụ kèo bóng đá câu lạc bộ.
+          </p>
+        </div>
+
+        <div class="uvp-box">
+          <div>
+            <h3>Giá trị cốt lõi (Unique Value Proposition)</h3>
+            <p>
+              Giúp chủ kèo giảm tải toàn bộ thao tác đếm người, cân đội và đòi tiền thủ công; giúp thành viên nắm rõ lịch sân, đội hình cân bằng và khoản phí minh bạch chỉ trong một luồng thao tác di động dưới 3 phút.
+            </p>
+          </div>
+          <div class="uvp-highlights">
+            <div class="uvp-chip">✓ Chia đội dựa trên Tier kỹ năng &amp; Thủ môn thực tế</div>
+            <div class="uvp-chip">✓ Check-in 1 chạm có cơ chế Hoàn tác &amp; Khôi phục lỗi mạng</div>
+            <div class="uvp-chip">✓ Chia đều chi phí sân + nước/bib &amp; mã VietQR có sẵn nội dung</div>
+          </div>
+        </div>
+
+        <div class="cards-4">
+          <article class="card">
+            <span class="step-num">01</span>
+            <h3>Tạo trận &amp; Vote khung giờ</h3>
+            <p>
+              Chủ kèo tạo buổi đá với nhiều khung giờ gợi ý. Thành viên chọn giờ phù hợp hoặc chọn nhanh lý do không tham gia bằng Chip có sẵn.
+            </p>
+            <div class="feature-benefit">Lợi ích: Chốt quân số tự động, không trôi tin nhắn</div>
+          </article>
+
+          <article class="card">
+            <span class="step-num">02</span>
+            <h3>Chia đội cân bằng &amp; Duyệt nghỉ</h3>
+            <p>
+              Admin xem danh sách bản nháp theo Tier (S, A, B, Mới) và Thủ môn trước khi công bố. Hỗ trợ thành viên gửi đơn xin nghỉ sau chia đội.
+            </p>
+            <div class="feature-benefit">Lợi ích: Đội hình cân sức, linh hoạt khi có người bận gấp</div>
+          </article>
+
+          <article class="card">
+            <span class="step-num">03</span>
+            <h3>Check-in tại sân &amp; Xử lý ngoại tuyến</h3>
+            <p>
+              Mở điểm danh đúng khung giờ tại sân. Hỗ trợ hoàn tác nếu bấm nhầm và giữ dữ liệu tạm để thử lại khi kết nối 4G ngoài sân chập chờn.
+            </p>
+            <div class="feature-benefit">Lợi ích: Điểm danh chuẩn xác làm căn cứ chia tiền</div>
+          </article>
+
+          <article class="card">
+            <span class="step-num">04</span>
+            <h3>Chốt bill minh bạch &amp; VietQR</h3>
+            <p>
+              Hiển thị công thức chia rõ ràng (tiền sân + nước/áo bib ÷ số người check-in), kèm mã QR ngân hàng và trạng thái xác nhận thanh toán.
+            </p>
+            <div class="feature-benefit">Lợi ích: Sòng phẳng tiền sân, giảm ngại nhắc nợ</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screens Showcase -->
+    <section class="section" id="screens">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">High-Fidelity Screens &amp; Interaction States</span>
+          <h2 class="section-title">Trọn bộ giao diện &amp; trạng thái tương tác trên Figma</h2>
+          <p class="section-subtitle">
+            Bấm từng nhóm bộ lọc hoặc bấm vào ảnh màn hình bất kỳ để phóng to kiểm tra chi tiết. Tất cả màn hình đều dùng dữ liệu thực tế của CLB CSE FC HCMUT.
+          </p>
+        </div>
+
+        <div class="filter-tabs" role="tablist" aria-label="Lọc màn hình theo luồng">
+          <button class="filter-tab active" type="button" data-filter="all">Tất cả (12 màn hình)</button>
+          <button class="filter-tab" type="button" data-filter="schedule">Lịch đá &amp; Tạo kèo</button>
+          <button class="filter-tab" type="button" data-filter="checkin">Chia đội &amp; Check-in</button>
+          <button class="filter-tab" type="button" data-filter="payment">Chi phí &amp; VietQR</button>
+          <button class="filter-tab" type="button" data-filter="states">Lỗi / Mất mạng / Trống</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <article class="screen-card" data-category="schedule" data-caption="01 Lịch đá — Theo dõi kèo đang vote giờ &amp; lịch sử">
+            <div class="screen-thumb">
+              <img src="assets/01-lich-da.png" alt="Màn hình 01 Lịch đá" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 2 · CORE MVP</span>
+              <h4>01 · Lịch đá CLB</h4>
+              <p>Hiển thị trận sắp tới nổi bật, thanh tiến độ chỗ trống và lịch sử đã đá.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="schedule" data-caption="02 Chi tiết trận — Bình chọn khung giờ hoặc báo không tham gia">
+            <div class="screen-thumb">
+              <img src="assets/02-vote-gio.png" alt="Màn hình 02 Chi tiết trận và vote giờ" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 2 · CORE MVP</span>
+              <h4>02 · Vote khung giờ đá</h4>
+              <p>Cho phép chọn khung giờ, đề xuất khung giờ mới hoặc báo vắng 1 chạm.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="schedule" data-caption="06 Tạo trận đấu — Giao diện dành cho Admin / Chủ kèo">
+            <div class="screen-thumb">
+              <img src="assets/06-admin-tao-tran.png" alt="Màn hình 06 Tạo trận đấu Admin" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 5 · ADMIN</span>
+              <h4>06 · Tạo trận đấu mới</h4>
+              <p>Chọn ngày đá, thêm nhiều khung giờ vote, sân thi đấu và link Google Maps.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="checkin" data-caption="02f Admin — Bản nháp chia đội &amp; Duyệt yêu cầu xin nghỉ">
+            <div class="screen-thumb">
+              <img src="assets/02f-admin-chia-doi.png" alt="Màn hình 02f Admin chia đội" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 3 · ADMIN</span>
+              <h4>02f · Chia đội (Bản nháp)</h4>
+              <p>Admin xem duyệt đơn xin nghỉ và cân chỉnh đội hình trước khi công bố.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="checkin" data-caption="02f-2 Đang mở Check-in — Nút điểm danh tại sân đã kích hoạt">
+            <div class="screen-thumb">
+              <img src="assets/02f2-mo-checkin.png" alt="Màn hình 02f-2 Đang mở Check-in" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 3 · ACTIVE STATE</span>
+              <h4>02f-2 · Đang mở Check-in</h4>
+              <p>Hiển thị đội hình theo Tier S/A/B/Mới và nút Check-in tại sân ở vùng ngón cái.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="checkin" data-caption="02f-3 Đã Check-in tại sân — Có tùy chọn Hoàn tác nếu bấm nhầm">
+            <div class="screen-thumb">
+              <img src="assets/02f3-da-checkin.png" alt="Màn hình 02f-3 Đã Check-in" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag success">FLOW 3 · SUCCESS &amp; UNDO</span>
+              <h4>02f-3 · Đã Check-in &amp; Hoàn tác</h4>
+              <p>Ghi nhận mốc thời gian 18:22 và hỗ trợ hoàn tác khi thành viên bấm nhầm.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="payment" data-caption="02g Chi tiết chi phí trận — Tổng hợp số người đã xác nhận / chờ chuyển">
+            <div class="screen-thumb">
+              <img src="assets/02g-chi-phi-tran.png" alt="Màn hình 02g Chi tiết chi phí trận" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 4 · BILL SPLIT</span>
+              <h4>02g · Chi phí &amp; Đối soát</h4>
+              <p>Công khai tiền sân chia đầu người và tiến độ đóng tiền của toàn bộ thành viên.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="payment" data-caption="03 Thanh toán VietQR — Quét mã hoặc copy nội dung chuyển khoản">
+            <div class="screen-thumb">
+              <img src="assets/03-thanh-toan-vietqr.png" alt="Màn hình 03 Thanh toán VietQR" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 4 · VIETQR</span>
+              <h4>03 · Thanh toán VietQR</h4>
+              <p>Hiển thị rõ từng khoản tiền sân, nước/bib, QR ngân hàng và mã nội dung chuyển.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="schedule" data-caption="04 Thành viên CLB — Quản lý 38 thành viên, 7 thủ môn và phân hạng Tier">
+            <div class="screen-thumb">
+              <img src="assets/04-thanh-vien-clb.png" alt="Màn hình 04 Thành viên CLB" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">FLOW 5 · CLUB ROSTER</span>
+              <h4>04 · Danh sách Thành viên</h4>
+              <p>Tìm kiếm nhanh, lọc ban cán sự, thủ môn và người chơi chưa xếp hạng.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="states" data-caption="00a-err Đăng nhập — Trạng thái nhập sai mật khẩu (Input Validation)">
+            <div class="screen-thumb">
+              <img src="assets/00a-err-login.png" alt="Màn hình 00a-err Lỗi xác thực" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag error">ERROR · VALIDATION STATE</span>
+              <h4>00a-err · Lỗi xác thực</h4>
+              <p>Cảnh báo viền đỏ, thông báo số lần thử còn lại và lối tắt Quên mật khẩu.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="states" data-caption="02f-err Check-in ngoại tuyến — Phục hồi khi sóng 4G tại sân yếu">
+            <div class="screen-thumb">
+              <img src="assets/02f-err-offline.png" alt="Màn hình 02f-err Lỗi mạng tại sân" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag error">OFFLINE · RECOVERY STATE</span>
+              <h4>02f-err · Lỗi mạng tại sân</h4>
+              <p>Lưu tạm mốc check-in khi sóng 4G yếu tại sân bóng kèm nút Thử lại ngay.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-category="states" data-caption="09b Thông báo trống — Empty State rõ ràng khi đã đọc hết thông báo">
+            <div class="screen-thumb">
+              <img src="assets/09b-empty-notif.png" alt="Màn hình 09b Thông báo trống" />
+            </div>
+            <div class="screen-meta">
+              <span class="screen-tag">EMPTY STATE</span>
+              <h4>09b · Thông báo trống</h4>
+              <p>Hiển thị trạng thái 0 chưa đọc nhất quán và hướng dẫn các sự kiện sắp tới.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design System & Mobile Ergonomics -->
+    <section class="section section-alt" id="design-system">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Design System &amp; Mobile Ergonomics</span>
+          <h2 class="section-title">Hệ thống thiết kế thống nhất, tối ưu cho thao tác ngoài sân</h2>
+          <p class="section-subtitle">
+            Toàn bộ ứng dụng xây dựng trên hệ thống Variables, Styles và hơn 40 Components/Variants tái sử dụng trực tiếp trong Figma để sẵn sàng chuyển giao sang mã nguồn React Native / Expo.
+          </p>
+        </div>
+
+        <div
+          class="ds-frame"
+          data-zoom-src="assets/00-design-system.png"
+          data-zoom-caption="CSE HitDad — Design System &amp; Foundations (Color Palette, Typography Scale &amp; Mobile Layout Rules)"
+        >
+          <img
+            src="assets/00-design-system.png"
+            alt="Bảng tổng hợp Design System và Foundations của CSE HitDad"
+          />
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <span class="stage-pill blue">Typography &amp; Contrast</span>
+            <h3>Cặp font Barlow Condensed &amp; Be Vietnam Pro</h3>
+            <p>
+              Số ngày đá và số tiền dùng <strong>Barlow Condensed Bold</strong> kích thước lớn (`40px` / `36px`) để liếc nhanh ngoài trời nắng; nội dung tiếng Việt dùng <strong>Be Vietnam Pro</strong> với độ tương phản cao trên nền `#F7F9FE`.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="stage-pill blue">Thumb-Zone &amp; Quick Chips</span>
+            <h3>Giảm tối đa nhập liệu bàn phím</h3>
+            <p>
+              Nút hành động chính cao `50px` cố định ở thanh đáy `93px` trong tầm với ngón cái. Các thao tác báo vắng hoặc xin nghỉ dùng bottom sheet với chip chọn nhanh chỉ cần 2 lần chạm.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="stage-pill blue">Reusable Components</span>
+            <h3>Sẵn sàng cho triển khai Assignment 3</h3>
+            <p>
+              Các thành phần cốt lõi như `HD/Check-in bar`, `HD/Team card`, `HD/Player row`, `HD/Tier badge` và `HD/Payment summary` được chuẩn hóa biến thể để ánh xạ thẳng sang các component React Native.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Status & Roadmap -->
+    <section class="section" id="status">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Product Development Status</span>
+          <h2 class="section-title">Lộ trình phát triển sản phẩm (CO3043)</h2>
+          <p class="section-subtitle">
+            Website này là trang thông tin chính thức của CSE HitDad trong suốt học phần, được cập nhật liên tục qua từng cột mốc từ khám phá sản phẩm đến phát hành ứng dụng.
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card roadmap-card">
+            <span class="stage-pill green">Đã hoàn thành · Assignment 1</span>
+            <h3>Khám phá sản phẩm &amp; Nền tảng</h3>
+            <ul class="roadmap-list">
+              <li>Xác định bài toán 3 giai đoạn (Trước – Tại sân – Sau trận).</li>
+              <li>Phân tích dữ liệu pilot web-app (5 session vote, 2 trận đã đá).</li>
+              <li>Chốt 13 tài liệu nền tảng trên GitHub Wiki &amp; GitHub Project.</li>
+            </ul>
+          </article>
+
+          <article class="card roadmap-card is-current">
+            <span class="stage-pill blue">Đang hoàn tất · Assignment 2 (Hiện tại)</span>
+            <h3>UI/UX Design, Prototype &amp; Validation</h3>
+            <ul class="roadmap-list">
+              <li>Hoàn thiện Design System &amp; hơn 30 màn hình High-Fidelity Figma.</li>
+              <li>Interactive Prototype 5 luồng chính kèm trạng thái Lỗi / Mất mạng / Trống.</li>
+              <li>Kiểm thử khả năng sử dụng (Usability Testing) với người dùng ngoài nhóm và xuất bản Behance Case Study.</li>
+            </ul>
+          </article>
+
+          <article class="card roadmap-card">
+            <span class="stage-pill">Tiếp theo · Assignment 3</span>
+            <h3>Lập trình Mobile App &amp; Phát hành</h3>
+            <ul class="roadmap-list">
+              <li>Hiện thực hóa toàn bộ giao diện và luồng MVP bằng Expo / React Native (SDK 58).</li>
+              <li>Tích hợp API backend thực tế, xác thực và luồng VietQR.</li>
+              <li>Cập nhật bản phát hành thử nghiệm (EAS Build) và thu thập phản hồi người dùng trên trang này.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta-band">
+      <div class="container cta-band-inner">
+        <div>
+          <h2>Khám phá Prototype &amp; Hồ sơ thiết kế HitDad</h2>
+          <p>
+            Toàn bộ file thiết kế Figma, bài phân tích quy trình thiết kế trên Behance và tài liệu dự án trên GitHub đều được mở công khai phục vụ đánh giá và kiểm thử.
+          </p>
+        </div>
+        <div class="hero-ctas" style="margin-bottom: 0;">
+          <a
+            class="btn btn-white"
+            href="https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mở Interactive Prototype
+          </a>
+            <a
+            class="btn btn-outline-light"
+            data-behance-link
+            href="https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mở Behance Case Study
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: #ffffff; font-size: 15px;">CSE HitDad — Nhóm Hiền và nhiều tài</strong>
+        <p style="margin: 6px 0 0;">
+          Bài tập lớn môn Phát triển ứng dụng cho thiết bị di động (CO3043) · Trường Đại học Bách Khoa TP.HCM (HCMUT).
+        </p>
+      </div>
+      <div class="footer-links">
+        <a
+          href="https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Figma File
+        </a>
+        <a
+          data-behance-link
+          href="https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Behance Case Study
+        </a>
+        <a href="https://github.com/HitDad/HitDad" target="_blank" rel="noopener noreferrer">
+          GitHub Repo
+        </a>
+        <a href="https://github.com/HitDad/HitDad/wiki" target="_blank" rel="noopener noreferrer">
+          GitHub Wiki
+        </a>
+        <a href="https://github.com/orgs/HitDad/projects/1" target="_blank" rel="noopener noreferrer">
+          GitHub Project
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Inspecting Screenshots -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Đóng ảnh xem trước">&times;</button>
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('nav-links');
+      if (toggle && navLinks) {
+        toggle.addEventListener('click', function () {
+          const isOpen = navLinks.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      const tabs = document.querySelectorAll('.filter-tab');
+      const cards = document.querySelectorAll('.screen-card');
+
+      // Attach scroll-reveal attributes automatically with staggered timing
+      document.querySelectorAll('.section-head, .uvp-box, .ds-frame, .cta-band-inner').forEach(function (el) {
+        if (!el.hasAttribute('data-reveal')) {
+          el.setAttribute('data-reveal', el.classList.contains('ds-frame') ? 'zoom-in' : 'fade-up');
+        }
+      });
+
+      document.querySelectorAll('.cards-2, .cards-3, .cards-4, .gallery-grid').forEach(function (group) {
+        const items = group.querySelectorAll('.card, .screen-card');
+        items.forEach(function (item, idx) {
+          if (!item.hasAttribute('data-reveal')) {
+            item.setAttribute('data-reveal', 'fade-up');
+          }
+          const delay = (idx % 4) * 90;
+          item.style.setProperty('--reveal-delay', delay + 'ms');
+        });
+      });
+
+      const revealEls = document.querySelectorAll('[data-reveal]');
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduceMotion || typeof IntersectionObserver === 'undefined') {
+        revealEls.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        revealEls.forEach(function (el) {
+          revealObserver.observe(el);
+        });
+      }
+
+      // Scroll Progress Bar, Hero Phone Parallax & Navbar Scroll-Spy
+      const progressEl = document.getElementById('scroll-progress');
+      const heroEl = document.querySelector('.hero');
+      const spySections = Array.from(document.querySelectorAll('main section[id]'));
+      const navAnchors = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+      let scrollTicking = false;
+
+      function updateOnScroll() {
+        scrollTicking = false;
+        const scrollTop = window.scrollY || window.pageYOffset || 0;
+        const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const progress = Math.min(1, Math.max(0, scrollTop / maxScroll));
+
+        if (progressEl) {
+          progressEl.style.setProperty('--scroll-progress', progress.toFixed(4));
+        }
+
+        if (!reduceMotion && heroEl) {
+          const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
+          if (scrollTop <= heroBottom) {
+            const centerShift = Math.min(28, scrollTop * 0.06);
+            const sideShift = Math.min(44, scrollTop * 0.1);
+            document.documentElement.style.setProperty('--parallax-center', -centerShift.toFixed(1) + 'px');
+            document.documentElement.style.setProperty('--parallax-side', sideShift.toFixed(1) + 'px');
+          }
+        }
+
+        let currentId = '';
+        const offset = scrollTop + 140;
+        spySections.forEach(function (sec) {
+          if (offset >= sec.offsetTop) {
+            currentId = sec.getAttribute('id') || '';
+          }
+        });
+        navAnchors.forEach(function (a) {
+          const target = a.getAttribute('href');
+          a.classList.toggle('active', Boolean(currentId && target === '#' + currentId));
+        });
+      }
+
+      window.addEventListener(
+        'scroll',
+        function () {
+          if (!scrollTicking) {
+            scrollTicking = true;
+            requestAnimationFrame(updateOnScroll);
+          }
+        },
+        { passive: true }
+      );
+      updateOnScroll();
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          const filter = tab.getAttribute('data-filter');
+          tabs.forEach(function (t) {
+            t.classList.remove('active');
+          });
+          tab.classList.add('active');
+          let visibleIndex = 0;
+          cards.forEach(function (card) {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.classList.remove('is-hidden');
+              card.style.setProperty('--reveal-delay', (visibleIndex % 4) * 70 + 'ms');
+              card.classList.remove('is-visible');
+              requestAnimationFrame(function () {
+                card.classList.add('is-visible');
+              });
+              visibleIndex++;
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+        });
+      });
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCap = document.getElementById('lightbox-caption');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      function openLightbox(src, caption) {
+        if (!lightbox || !lightboxImg || !lightboxCap) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = caption;
+        lightboxCap.textContent = caption;
+        lightbox.classList.add('open');
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('open');
+      }
+
+      cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          const img = card.querySelector('img');
+          const caption = card.getAttribute('data-caption') || (img ? img.alt : '');
+          if (img) openLightbox(img.src, caption);
+        });
+      });
+
+      const dsFrame = document.querySelector('.ds-frame');
+      if (dsFrame) {
+        dsFrame.addEventListener('click', function () {
+          const src = dsFrame.getAttribute('data-zoom-src');
+          const caption = dsFrame.getAttribute('data-zoom-caption') || 'Design System';
+          if (src) openLightbox(src, caption);
+        });
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>

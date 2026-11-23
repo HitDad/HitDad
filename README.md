@@ -2,7 +2,7 @@
 
 # CSE HitDad
 
-Dự án môn **Phát triển ứng dụng di động** của nhóm **Hiền và nhiều tài**.
+Bài tập lớn môn **Phát triển ứng dụng cho thiết bị di động (CO3043)** của nhóm **Hiền và nhiều tài**.
 
 HitDad hướng tới hỗ trợ chủ kèo và thành viên câu lạc bộ bóng đá nội bộ
 phối hợp tổ chức trận đấu: đăng ký tham gia, điểm danh, chia đội và theo dõi
@@ -18,6 +18,17 @@ sẽ được xác định dựa trên bằng chứng và quyết định sản 
 | [GitHub Project](https://github.com/orgs/HitDad/projects/1) | Công việc, người phụ trách, trạng thái và tiến độ |
 | [Issues](https://github.com/HitDad/HitDad/issues) | Phân công, checklist bàn giao và trao đổi review |
 | [Milestones](https://github.com/HitDad/HitDad/milestones) | Các mốc hoàn thành công việc |
+
+## Assignment 2 — Product Design, Prototyping, and Validation
+
+Giai đoạn thiết kế giao diện High-Fidelity, xây dựng Design System, Interactive Prototype và kiểm thử khả năng sử dụng:
+
+- **Figma Design & Design System:** [Figma-HitDad](https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273) (gồm 2 trang `HitDad · Screens` và `HitDad · Components`).
+- **Interactive Figma Prototype:** [Chạy thử Prototype 5 luồng](https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274).
+- **Behance Product Design Case Study:** [CSE HitDad — Behance Case Study](https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination).
+- **Product Landing Page:** [CSE HitDad — Product Landing Page](https://cse-hitdad.vercel.app) (mã nguồn tại [`landing-page/index.html`](landing-page/index.html)).
+- **Tài liệu cập nhật Wiki, Usability Testing & Khai báo AI:** [`docs/ass2/usability-testing-and-wiki-update.md`](docs/ass2/usability-testing-and-wiki-update.md).
+- **Khung nội dung Behance Case Study:** [`docs/ass2/behance-case-study-guide.md`](docs/ass2/behance-case-study-guide.md).
 
 ## Assignment 1 — Product Discovery & Foundation
 
@@ -80,6 +91,4 @@ Web demo có trước phục vụ tham khảo và nghiên cứu ban đầu:
 
 ## Trạng thái hiện tại
 
-Dự án đang trong giai đoạn khám phá sản phẩm và xây dựng nền tảng cho
-Assignment 1. Tài liệu, phân công thành viên và danh mục evidence đang được
-hoàn thiện. Tiến độ chi tiết được cập nhật trên GitHub Project và Issues.
+Dự án đã hoàn tất **Assignment 2** (UI/UX Design System, Interactive Prototype 5 luồng trên Figma, kiểm thử Usability Testing P01–P03 với cải tiến Before/After, Behance Product Design Case Study và Product Landing Page công khai tại `https://cse-hitdad.vercel.app`) và đang triển khai ứng dụng di động Expo / React Native cho **Assignment 3**. Tiến độ chi tiết được cập nhật trên GitHub Project và Issues.
