@@ -8,7 +8,7 @@ Bài tập lớn môn **Phát triển ứng dụng cho thiết bị di động (
 
 ## Assignment 2 — Product Design, Prototyping & Validation
 
-- **[Assignment 2 — Tổng hợp Thiết kế, Kiểm thử & Cải tiến](Assignment-2-Product-Design-Prototyping-and-Validation)** *(MVP Refinement, User Flows cập nhật, Usability Testing P01–P03, Design Iterations & AI Disclosure)*
+- **[Assignment 2 — Tổng hợp Thiết kế & Đối chiếu MVP](Assignment-2-Product-Design-Prototyping-and-Validation)** *(MVP Refinement, Đối chiếu F1–F6, User Flows cập nhật & AI Disclosure)*
 - **Figma Design & Interactive Prototype:** [Figma-HitDad](https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-273) · [Interactive Prototype](https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274)
 - **Behance Product Design Case Study:** [CSE HitDad — Behance Case Study](https://www.behance.net/gallery/258941175/CSE-HitDad-Mobile-App-for-Football-Club-Coordination)
 - **Product Landing Page:** [CSE HitDad — Product Landing Page](https://cse-hitdad.vercel.app)
@@ -33,8 +33,9 @@ Bài tập lớn môn **Phát triển ứng dụng cho thiết bị di động (
 
 ---
 
-## Tài nguyên dự án
+## Tài nguyên & Kết quả kiểm thử (Tách riêng khỏi phần giới thiệu dự án)
 - [GitHub Organization](https://github.com/HitDad)
 - [Repository](https://github.com/HitDad/HitDad)
 - [GitHub Project](https://github.com/orgs/HitDad/projects/1)
-- [Evidences](https://github.com/HitDad/HitDad/wiki/Evidences)
+- [Evidences (Assignment 1 — Pilot & Khảo sát)](https://github.com/HitDad/HitDad/wiki/Evidences)
+- [Báo cáo Usability Testing & Design Iteration (Assignment 2 — P01–P03)](https://github.com/HitDad/HitDad/blob/main/docs/ass2/usability-testing-report.md)

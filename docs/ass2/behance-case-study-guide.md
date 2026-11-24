@@ -41,7 +41,7 @@
 - **Headline lớn:** *"Chốt kèo nhanh · Chia đội chuẩn · Sòng phẳng tiền sân — ngay trên điện thoại ngoài sân bóng."*
 - **3 điểm khác biệt cốt lõi:**
   1. **Không thay thế app chat, tập trung đúng nghiệp vụ:** Chỉ mở app để chốt giờ, xem đội, check-in và thanh toán dưới 3 phút.
-  2. **Chia đội công bằng minh bạch:** Cân đội tự động/bản nháp theo hạng kỹ năng (`S / A / B / Mới`) và phân bổ `Thủ môn`.
+  2. **Chia đội công bằng minh bạch:** Cân đội tự động/bản nháp theo hạng kỹ năng (`S / A / B / C / D / Mới`) và phân bổ `Thủ môn`.
   3. **Sòng phẳng từng nghìn đồng:** Chia đều trực tiếp theo số người thực tế `check-in` kèm mã VietQR có sẵn nội dung đối soát.
 
 ## 4. Key Design Decisions
