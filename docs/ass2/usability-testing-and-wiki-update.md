@@ -46,7 +46,7 @@
 
 ### 2.1. Kịch bản kiểm thử & Bộ tác vụ đại diện (Representative Tasks)
 
-- **Công cụ sử dụng:** Figma Interactive Prototype (`https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274`).
+- **Công cụ sử dụng:** Figma Interactive Prototype (`https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274`).
 - **Quy tắc thực hiện:** Người điều phối chỉ đọc bối cảnh tình huống, **không gợi ý nút cần bấm**, quan sát thao tác tự nhiên, ghi nhận thời gian hoàn thành, điểm bị khựng/nhầm lẫn và hỏi lý do sau khi kết thúc tác vụ. Tôn trọng quyền riêng tư bằng cách ẩn danh (`P01`, `P02`, `P03`).
 
 | Mã Task | Bối cảnh & Yêu cầu giao cho người test | Starting Point trên Figma | Điều kiện hoàn thành (Success Criteria) | Điểm cần quan sát |

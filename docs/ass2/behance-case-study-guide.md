@@ -98,12 +98,12 @@
     style="border: 1px solid rgba(0, 0, 0, 0.1);"
     width="100%"
     height="640"
-    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfGXYmJMlxPStGfv1ouUuDe%2FFigma-HitDad--Copy-%3Fnode-id%3D1-273%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D1%253A274"
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfGXYmJMlxPStGfv1ouUuDe%2FFigma-HitDad%3Fnode-id%3D1-274%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D1%253A274"
     allowfullscreen>
   </iframe>
   ```
 - **Các đường dẫn đính kèm cuối bài Behance:**
-  - Interactive Figma Prototype: `https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274`
-  - Figma Design File: `https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad--Copy-?node-id=1-273`
+  - Interactive Figma Prototype: `https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274`
+  - Figma Design File: `https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-273`
   - Product Landing Page: `https://cse-hitdad.vercel.app`
   - GitHub Wiki & Project: `https://github.com/HitDad/HitDad/wiki` · `https://github.com/orgs/HitDad/projects/1`
