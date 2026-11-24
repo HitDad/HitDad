@@ -1,6 +1,6 @@
 # Assignment 2 — Product Design, Prototyping & Validation
 
-> **Liên kết nhanh:** [Trang chủ Wiki](Home) · [Figma Design](https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-273) · [Interactive Prototype](https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274) · [Behance Case Study](https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination) · [Product Landing Page](https://cse-hitdad.vercel.app)
+> **Liên kết nhanh:** [Trang chủ Wiki](Home) · [Figma Design](https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-273) · [Interactive Prototype](https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274) · [Behance Case Study](https://www.behance.net/gallery/258941175/CSE-HitDad-Mobile-App-for-Football-Club-Coordination) · [Product Landing Page](https://cse-hitdad.vercel.app)
 
 ---
 

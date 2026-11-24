@@ -5,7 +5,7 @@
 ---
 
 ## Thông tin thiết lập Project trên Behance
-- **Published URL:** https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination
+- **Published URL:** https://www.behance.net/gallery/258941175/CSE-HitDad-Mobile-App-for-Football-Club-Coordination
 - **Project Title:** `CSE HitDad — Mobile App for Football Club Coordination`
 - **Project Tags:** `Mobile App Design`, `UI/UX`, `Product Design`, `Design System`, `Figma Prototype`, `Sports Tech`
 - **Tools Used:** `Figma`, `Google Fonts (Barlow Condensed & Be Vietnam Pro)`

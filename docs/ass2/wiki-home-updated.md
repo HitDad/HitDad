@@ -10,7 +10,7 @@ Bài tập lớn môn **Phát triển ứng dụng cho thiết bị di động (
 
 - **[Assignment 2 — Tổng hợp Thiết kế, Kiểm thử & Cải tiến](Assignment-2-Product-Design-Prototyping-and-Validation)** *(MVP Refinement, User Flows cập nhật, Usability Testing P01–P03, Design Iterations & AI Disclosure)*
 - **Figma Design & Interactive Prototype:** [Figma-HitDad](https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-273) · [Interactive Prototype](https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274)
-- **Behance Product Design Case Study:** [CSE HitDad — Behance Case Study](https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination)
+- **Behance Product Design Case Study:** [CSE HitDad — Behance Case Study](https://www.behance.net/gallery/258941175/CSE-HitDad-Mobile-App-for-Football-Club-Coordination)
 - **Product Landing Page:** [CSE HitDad — Product Landing Page](https://cse-hitdad.vercel.app)
 
 ---

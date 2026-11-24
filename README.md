@@ -25,7 +25,7 @@ Giai đoạn thiết kế giao diện High-Fidelity, xây dựng Design System, 
 
 - **Figma Design & Design System:** [Figma-HitDad](https://www.figma.com/design/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-273) (gồm 2 trang `HitDad · Screens` và `HitDad · Components`).
 - **Interactive Figma Prototype:** [Chạy thử Prototype 5 luồng](https://www.figma.com/proto/fGXYmJMlxPStGfv1ouUuDe/Figma-HitDad?node-id=1-274&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A274).
-- **Behance Product Design Case Study:** [CSE HitDad — Behance Case Study](https://www.behance.net/gallery/258893173/CSE-HitDad-Mobile-App-for-Football-Club-Coordination).
+- **Behance Product Design Case Study:** [CSE HitDad — Behance Case Study](https://www.behance.net/gallery/258941175/CSE-HitDad-Mobile-App-for-Football-Club-Coordination).
 - **Product Landing Page:** [CSE HitDad — Product Landing Page](https://cse-hitdad.vercel.app) (mã nguồn tại [`landing-page/index.html`](landing-page/index.html)).
 - **Tài liệu cập nhật Wiki, Usability Testing & Khai báo AI:** [`docs/ass2/usability-testing-and-wiki-update.md`](docs/ass2/usability-testing-and-wiki-update.md).
 - **Khung nội dung Behance Case Study:** [`docs/ass2/behance-case-study-guide.md`](docs/ass2/behance-case-study-guide.md).
